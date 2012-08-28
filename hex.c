@@ -283,6 +283,10 @@ ErrorCode hexWrite(const char verify)
 
 	      break;
 
+	    } else if(5 == type) { /* EOF record */
+
+	      /* Ignore */
+
 	    } else if(4 == type) { /* Extended linear address record */
 
 	      if(1 != sscanf(&hexFileData[offset+9],"%04x",&addrHi))
